@@ -1,0 +1,35 @@
+.Endpoint {
+  width: 100%;
+  max-width: 350px;
+  color: black;
+  background-color: #F5F5F5;
+  font-size: 15px;
+  padding: 7px;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.Endpoint--active {
+  background-color: #C5CAE9;
+}
+
+.Endpoint__title {
+  max-width: 80%;
+  overflow: hidden;
+}
+
+.Endpoint__icon {
+  padding: 0 10px;
+  cursor: pointer;
+}

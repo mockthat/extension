@@ -1,0 +1,10 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.Header__title {
+  font-size: 18px;
+  font-weight: bold;
+}
