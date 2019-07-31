@@ -17,7 +17,7 @@ class Popup extends React.Component {
   }
 
   componentDidMount() {
-    this.updateEndpoints();
+    setTimeout(() => this.updateEndpoints(), 30);
   }
 
   updateEndpoints() {
@@ -43,7 +43,7 @@ class Popup extends React.Component {
       <div>
         {!this.state.error && <Header refresh={this.updateEndpoints} />}
         {this.state.error && <p>Server is not running!</p>}
-        {this.state.endpoints && this.state.endpoints.map((endpoint) => {
+        {!this.state.error && this.state.endpoints && this.state.endpoints.map((endpoint) => {
                 const endpointGroup = [<p className="scenario-title">{endpoint.name}</p>];
 
                 endpoint.scenarios.forEach(scenario =>

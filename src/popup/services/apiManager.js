@@ -1,14 +1,21 @@
+/* global fetch, browser, chrome */
+
+let serverPath = 'http://localhost:7000';
+
+(chrome || browser).storage.sync.get('serverPath', (items) => {
+  // eslint-disable-next-line prefer-destructuring
+  serverPath = items.serverPath || 'http://localhost:7000';
+});
+
+
 export function getEndpoints() {
-  // eslint-disable-next-line no-undef
-  return fetch('http://localhost:7000/available-mocks');
+  return fetch(`${serverPath}/available-mocks`);
 }
 
 export function activateEnpoint(categoryId, scenarioId) {
-  // eslint-disable-next-line no-undef
-  return fetch(`http://localhost:7000/mock/${categoryId}/${scenarioId}/start`, { method: 'POST' });
+  return fetch(`${serverPath}/mock/${categoryId}/${scenarioId}/start`, { method: 'POST' });
 }
 
 export function deactivateEnpoint(categoryId, scenarioId) {
-  // eslint-disable-next-line no-undef
-  return fetch(`http://localhost:7000/mock/${categoryId}/${scenarioId}/stop`, { method: 'POST' });
+  return fetch(`${serverPath}/mock/${categoryId}/${scenarioId}/stop`, { method: 'POST' });
 }
