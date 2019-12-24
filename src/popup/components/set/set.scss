@@ -1,0 +1,25 @@
+.Set {
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  padding: 7px;
+  margin: 2px 0;
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.Set--active {
+  background-color: #00AA8D;
+}
+
+.Set__title {
+  max-width: 80%;
+  overflow: hidden;
+}
