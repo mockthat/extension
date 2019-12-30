@@ -7,3 +7,18 @@
   padding-top: 10px;
   font-size: 15px;
 }
+
+.sets-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 16px;
+}
+
+.sets-wrapper {
+  background: #C5CAE9;
+  padding: 10px;
+}
+
+.sets-title {
+  font-weight: bold;
+}
